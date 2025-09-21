@@ -22,24 +22,38 @@
       z-index: 1000;
     }
 
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
+   nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* 🔑 permite que los links salten de línea */
+}
 
-    nav a {
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-      padding: 10px 15px;
-      border-radius: 10px;
-      transition: background 0.3s;
-    }
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: background 0.3s;
+  font-size: 14px;
+}
 
-    nav a:hover {
-      background: #ff66b2;
-    }
+/* 🔑 Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;   /* menú en columna */
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav a {
+    display: block;
+    width: 80%;              /* los botones ocupan casi todo el ancho */
+    text-align: center;
+    font-size: 16px;         /* un poco más grande para celular */
+  }
+}
 
     section {
       display: none;
@@ -199,5 +213,6 @@
 </style>
 </body>
 </html>
+
 
 
